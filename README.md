@@ -1,7 +1,6 @@
 # Car Price Prediction using Linear Regression and Streamlit
 
-[![Car Price Prediction](https://github.com/user-attachments/assets/your-image-link)](https://github.com/user-attachments/assets/9f3c4499-379c-4ee0-a563-611a363c1327)
-
+![appStreamlit-GoogleChrome2024-12-0601-56-21-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/eaea1120-3e1a-4eb2-b5f8-eccf44d7d626)
 ---
 
 ## Introduction
