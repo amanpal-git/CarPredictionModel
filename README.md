@@ -1,5 +1,9 @@
 # Car Price Prediction using Linear Regression and Streamlit
 
+[![Car Price Prediction](https://github.com/user-attachments/assets/your-image-link)](https://github.com/user-attachments/assets/9f3c4499-379c-4ee0-a563-611a363c1327)
+
+---
+
 ## Introduction
 This project focuses on predicting car prices using a Linear Regression model, with the additional feature of a user-friendly web interface built with **Streamlit**. The app allows users to input car details (such as car name, company, year, kilometers driven, and fuel type) and receive an estimated price prediction based on a trained model. The project also includes an animated GIF of a car for a visually interactive experience.
 
