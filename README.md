@@ -1,7 +1,16 @@
-# Car Price Prediction using Linear Regression
+# Car Price Prediction using Linear Regression and Streamlit
 
 ## Introduction
-This project focuses on predicting car prices using a Linear Regression model. The code provided here leverages Python libraries such as Pandas, NumPy, and scikit-learn for data preprocessing, modeling, and evaluation. The dataset used for training and testing the model is loaded from a CSV file.
+This project focuses on predicting car prices using a Linear Regression model, with the additional feature of a user-friendly web interface built with **Streamlit**. The app allows users to input car details (such as car name, company, year, kilometers driven, and fuel type) and receive an estimated price prediction based on a trained model. The project also includes an animated GIF of a car for a visually interactive experience.
+
+The machine learning model for predicting car prices is trained using a dataset loaded from a CSV file, and the model is serialized using `pickle` for easy deployment.
+
+## Project Features
+- **Interactive Web Interface**: Built with Streamlit, the app allows users to input car details and get an estimated car price prediction.
+- **Car Animation**: A car animation GIF is embedded on the left side of the web app for a more engaging user experience.
+- **Price Prediction**: The app uses a pre-trained Linear Regression model to predict car prices based on user inputs.
+- **Data Preprocessing**: Data is cleaned and processed before training the model.
+- **Model Deployment**: The trained model is saved using `pickle` for deployment in the web app.
 
 ## Code Structure
 The code is divided into several sections, each with a specific purpose:
@@ -10,33 +19,36 @@ The code is divided into several sections, each with a specific purpose:
 ```python
 import pandas as pd
 import numpy as np
-
+import pickle
+import streamlit as st 
+```
 # Load the car dataset from a CSV file
-car = pd.read_csv('C:/Users/thero/jupyterFiles/Cleaned car.csv')
-```
+car = pd.read_csv('Cleaned car.csv')
 
-# Data Preprocessing
-In this section, the data is preprocessed to prepare it for modeling. Columns relevant to the prediction task are selected, and categorical variables are one-hot encoded.
+## Running the Code
 
-# Hyperparameter Tuning
-The code also includes a section for hyperparameter tuning. It runs the model with different random states and selects the best-performing model based on the R-squared score.
+Make sure you have Python installed on your system.
 
-# Making Predictions
-Finally, you can use the trained model to make predictions for new data. Here's an example:
-```
-new_data = pd.DataFrame([['Mahindra XUV500','Mahindra',2016,4000,'Petrol']], columns=['name','company','year','kms_driven','fuel_type'])
-predictions = pipeline.predict(new_data)
-print(predictions)
-```
-# Running the Code
-Make sure you have Python installed on your system.  
-Install the required libraries using pip install pandas numpy scikit-learn.   
-Download the CSV file containing the car data and specify the correct file path in the code.   
-Run the code in your preferred Python environment (e.g., Jupyter Notebook, VSCode, or any IDE).     
-The code will load the dataset, preprocess the data, train a Linear Regression model, and evaluate its performance. You can then use the trained model to make price predictions for new data.  
+1. Install the required libraries:
+    ```bash
+    pip install pandas numpy scikit-learn streamlit
+    ```
 
+2. Download the CSV file containing the car data and specify the correct file path in the code.
 
-# Results
-The code provides two evaluation metrics for the model: Mean Squared Error (MSE) and R-squared (R2) score. These metrics can be used to assess the model's accuracy in predicting car prices.
+3. Run the Streamlit app:
+    ```bash
+    streamlit run app.py
+    ```
 
-Feel free to modify the code, dataset, or model parameters to further improve the prediction accuracy or explore different machine learning techniques.
+The code will load the dataset, preprocess the data, train a Linear Regression model, and evaluate its performance. You can then use the trained model to make price predictions for new data.
+
+## Results
+
+The app provides the predicted car price based on the input features. It also displays a car animation GIF for an enhanced user experience.
+
+## Future Enhancements
+
+- Experiment with other machine learning models to improve prediction accuracy.
+- Add more input features (e.g., car condition, location, etc.) for better predictions.
+- Deploy the app on a cloud platform like Heroku or AWS to make it publicly accessible.
